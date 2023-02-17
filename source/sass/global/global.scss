@@ -1,1 +1,32 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее*/
+/* Глобальные селекторы img, body, html и так далее*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+
+  display: grid;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}

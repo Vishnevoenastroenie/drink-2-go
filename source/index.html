@@ -1,15 +1,97 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
-  <title>Магазин кофе Drink2Go</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="Свежесвареный кофе, кофейный напиток, доставка кофе, кофе без кофеина, кофе на растительном молоке">
+  <meta name="description" content="Широкий выбор кофейных напитков без вреда для Вашего здоровья">
+
+  <link rel="preload" href="fonts/Montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Montserrat/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Montserrat/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Montserrat/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+  <link rel="icon" href="img/favicon/svg-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple-favicon.png">
+
   <link rel="stylesheet" href="css/style.css">
+
+  <title>Drink2Go - интернет-магазин по продаже кофе.</title>
 </head>
 
 <body class="page__body">
-  <header class="header">Шапка</header>
+
+  <header class="header">
+    <nav class="navigation">
+
+      <a class="navigation__logo" href="#">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/desctop-nav-logo.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet-nav-logo.svg">
+          <img src="img/mobil-nav-logo.svg" width="32" height="36" alt="Логотип интернет-магазина Drink2Go - фиолетовый овал с белой цифрой два внутри.">
+        </picture>
+      </a>
+      <span class="navigation__logo-description">Интернет-магазин<br>кофейных напитков</span>
+
+      <ul class="navigation__list list-reset">
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link--current" href="#">Главная</a>
+        </li>
+
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Каталог</a>
+        </li>
+
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Доставка</a>
+        </li>
+
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">О нас</a>
+        </li>
+      </ul>
+
+      <ul class="navigation__profile-list list-reset">
+        <li class="navigation__profile-item">
+          <a class="navigation__profile-link" href="#">
+            <svg class="navigation__profile-icon" aria-hidden="true" focusable="false" width="16" height="16">
+
+            </svg>
+            <span class="visually-hidden">Личный кабинет.</span>
+            <span class="visible-desktop">Войти</span>
+          </a>
+        </li>
+
+        <li class="navigation__profile-item">
+          <a class="navigation__profile-link" href="#">
+            <svg class="navigation__profile-icon" aria-hidden="true" focusable="false" width="16" height="16">
+
+            </svg>
+            <span class="visually-hidden">Корзина.</span>
+            <span>Корзина</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="navigation__btn" type="button">
+        <span class="visually-hidden">Открыть меню./Закрыть меню.</span>
+      </button>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- Основное содержимое страницы -->
+  </main>
+
+  <footer class="main-footer">
+    <!-- Подвал сайта -->
+  </footer>
+
 
   <script src="./js/script.js" defer></script>
 </body>
