@@ -1,13 +1,11 @@
 /* GLOBAL */
 @import "global/variables";
-
 @import "global/global";
-
 @import "global/fonts";
-
 @import "global/utils";
+@import "global/swiper";
 
 /* BLOCKS */
 @import "blocks/header";
-
 @import "blocks/container";
+@import "blocks/button";

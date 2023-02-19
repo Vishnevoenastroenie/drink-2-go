@@ -12,16 +12,11 @@ html {
 }
 
 body {
-  position: relative;
+  margin: 0;
 
-  display: grid;
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0 auto;
+  font-family: $font;
 
-  font-family: "Montserrat", "Arial", sans-serif;
-  color: #000000;
+  background-color: $color_lightest-grey;
 }
 
 img {
