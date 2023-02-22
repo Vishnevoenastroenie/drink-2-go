@@ -1,0 +1,49 @@
+@import "../global/variables.scss";
+
+.footer__copyright {
+  padding: 20px 0 30px;
+
+  text-align: center;
+}
+
+.footer__copyright-info,
+.footer__copyright-link {
+  font-size: 12px;
+  line-height: 16px;
+  color: $color_base-grey;
+}
+
+.footer__copyright-info {
+  margin: 0;
+}
+
+.footer__copyright-link {
+  padding-left: 4px;
+
+  svg {
+    vertical-align: top;
+    color: $color_base-grey;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding-top: 8px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .footer__copyright-link {
+    &:hover,
+    &:focus,
+    &:hover svg,
+    &:focus svg {
+      color: $color_base-primary;
+    }
+
+    &:active,
+    &:active svg {
+      color: $color_primary-darker;
+    }
+  }
+}

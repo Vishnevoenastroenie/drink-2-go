@@ -1,0 +1,49 @@
+@import "../global/variables.scss";
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.sorting__title {
+  font-weight: 600;
+  font-size: 16px;
+  color: $color_base-black;
+}
+
+.sorting__select {
+  font-weight: 600;
+  font-size: 16px;
+  color: $color_base-primary;
+  text-transform: lowercase;
+
+  background-color: $color_lightest-grey;
+  border: none;
+
+  appearance: none;
+}
+
+@media (min-width: $tablet-width) {
+  .sorting {
+    justify-content: flex-end;
+    margin-bottom: 28px;
+  }
+
+  .sorting__select-container {
+    margin-left: 26px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .sorting__select {
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $color_base-secondary;
+    }
+  }
+}

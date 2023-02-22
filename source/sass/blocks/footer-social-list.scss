@@ -1,7 +1,67 @@
 @import "../global/variables.scss";
 
-.footer__social-list {
+.footer__social-list-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer__social-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__social-list-item {
+  margin-right: 20px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.footer__social-link {
+  display: block;
+  padding: 10px;
+
+  border-radius: 4px;
+
+  svg {
+    vertical-align: top;
+    color: $color_light-grey;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .footer__social-list-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .footer__social-list {
+    margin-left: 0;
+  }
+
+  .footer__social-link {
+    &:hover,
+    &:focus {
+      background-color: $color_base-secondary;
+
+      svg {
+        color: $color_base-primary;
+      }
+    }
+
+    &:active {
+      background-color: $color_primary-opacity;
+
+      svg {
+        color: $color_base-primary;
+      }
+    }
+  }
 }
