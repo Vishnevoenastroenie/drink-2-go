@@ -1,0 +1,144 @@
+.advantage__container {
+  margin-bottom: 61px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.advantage__big-title {
+  margin-bottom: 5px;
+}
+
+.advantage__big-subtitle {
+  margin: 0 0 36px;
+  line-height: 36px;
+}
+
+.advantage__title {
+  display: block;
+  margin-bottom: 4px;
+  @include mixins.font-bold;
+  @include mixins.font-heading-3;
+  color: variables.$base-black;
+}
+
+.advantage__description {
+  margin: 0;
+  @include mixins.font-regular;
+  @include mixins.font-body;
+}
+
+.advantage__item {
+  position: relative;
+  margin-bottom: 33px;
+  padding-top: 65px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--icon-clock::before {
+    background-image: url("../img/advantage-icon-clock.svg");
+  }
+
+  &--icon-pocket::before {
+    background-image: url("../img/advantage-icon-pocket.svg");
+  }
+
+  &--icon-lightning::before {
+    background-image: url("../img/advantage-icon-lightning.svg");
+  }
+
+  &--icon-leaf::before {
+    background-image: url("../img/icon-leaf.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantage {
+    padding-bottom: 99px;
+  }
+
+  .advantage__container {
+    margin-bottom: 30px;
+    padding-top: 60px;
+  }
+
+  .advantage__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px 10px;
+    text-align: left;
+  }
+
+  .advantage__big-title {
+    margin-bottom: 4px;
+  }
+
+  .advantage__big-subtitle {
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .advantage__item {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 82px;
+
+    &:before {
+      top: 0;
+      left: 10px;
+      transform: translateX(0);
+    }
+  }
+
+  .advantage__title {
+    margin-bottom: 10px;
+    line-height: 36px;
+  }
+
+  .advantage__description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .advantage {
+    padding-bottom: 90px;
+  }
+
+  .advantage__container {
+    padding-top: 100px;
+  }
+
+  .advantage__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+  }
+
+  .advantage__big-subtitle {
+    margin-bottom: 156px;
+  }
+
+  .advantage__item {
+    padding-left: 0;
+    text-align: center;
+
+    &:before {
+      top: -76px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

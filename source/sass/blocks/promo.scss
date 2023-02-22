@@ -1,0 +1,102 @@
+.promo {
+  position: relative;
+
+  background-color:#f3ebe1;
+}
+
+.promo__slider-item {
+  height: auto;
+
+  text-align: center;
+}
+
+.promo__pagination-button {
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--prev {
+    left: -4px;
+
+    svg {
+      color: $color_base-primary;
+    }
+  }
+
+  &--next {
+    right: -4px;
+
+    svg {
+      color: $color_base-primary;
+    }
+  }
+}
+
+@media ($tablet-width) {
+  .promo__pagination-button {
+    top: -93px;
+
+    width: 80px;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .promo__pagination-button {
+
+    &--prev {
+      top: 0;
+
+      padding: 0 35px 0;
+
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to right,
+        $color_base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: $color_base-grey;
+      }
+    }
+
+    &--next {
+      top: 0;
+
+      padding: 0 35px 0;
+
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background: linear-gradient(to left, $color_base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: $color_base-grey;
+      }
+    }
+  }
+}
