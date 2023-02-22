@@ -1,3 +1,5 @@
+@import "../global/variables.scss";
+
 .map__container {
   &--no-js .map__canvas--image {
     display: block;
@@ -27,7 +29,7 @@
   object-fit: cover;
 }
 
-@media ($tablet-width) {
+@media (min-width: $tablet-width) {
   .map__canvas {
     height: 480px;
   }

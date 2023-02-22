@@ -1,6 +1,9 @@
+@import "../global/variables.scss";
+
 .catalog__product-card {
   padding: 40px 20px 20px;
-  background-color: variables.$base-white;
+
+  background-color: $color_base-white;
   border-radius: 4px;
 }
 
@@ -13,6 +16,7 @@
 .catalog__image-link {
   display: block;
   margin-bottom: 24px;
+
   text-align: center;
 }
 
@@ -26,14 +30,15 @@
 
 .catalog__description {
   margin: 0 0 16px;
-  @include mixins.font-regular;
-  @include mixins.font-body;
+
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .catalog__actions {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .catalog__price {
@@ -65,14 +70,12 @@
 }
 
 @media (min-width: $desktop-min-width) {
-  .catalog__product-card  {
+  .catalog__product-card {
     &:hover,
     &:focus {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
-  }
 
-  .catalog__product-card  {
     &--selected {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }

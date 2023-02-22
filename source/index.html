@@ -8,10 +8,10 @@
   <meta name="keywords" content="Свежесвареный кофе, кофейный напиток, доставка кофе, кофе без кофеина, кофе на растительном молоке">
   <meta name="description" content="Широкий выбор полезных кофейных напитков">
 
-  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <!-- <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin=""> -->
 
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon/favicon.png">
@@ -129,7 +129,7 @@
             <picture class="promo__image-container">
               <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop-slider-lavender.webp 1x, img/desktop-slider-lavender@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-slider-lavender.webp 1x, img/tablet-slider-lavender@2x.webp 2x">
-              <source type="image/webp" srcset="img/mobile-lavender.webp 1x, img/mobile-lavende@2x.webp 2x">
+              <source type="image/webp" srcset="img/mobile-slider-lavender.webp 1x, img/mobile-slider-lavender@2x.webp 2x">
 
               <source media="(min-width: 1024px)" srcset="img/desktop-slider-lavender 1x, img/desktop-slider-lavender@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-slider-lavender.png 1x, img/tablet-slider-lavender@2x.png 2x">
@@ -201,22 +201,22 @@
         <p class="advantage__big-subtitle">Главные причины выбрать Drink2Go</p>
 
         <ul class="advantage__list list-reset">
-          <li class="advantage__item advantage__item--icon-clock">
+          <li class="advantage__item advantage__item-icon-clock">
             <span class="advantage__title">Скорость</span>
             <p class="advantage__description">Готовый напиток всегда под рукой &mdash; просто открой банку</p>
           </li>
 
-          <li class="advantage__item advantage__item--icon-pocket">
+          <li class="advantage__item advantage__item-icon-pocket">
             <span class="advantage__title">Удобство</span>
             <p class="advantage__description">Легко помещается и в карман, и в маленькую сумочку</p>
           </li>
 
-          <li class="advantage__item advantage__item--icon-lightning">
+          <li class="advantage__item advantage__item-icon-lightning">
             <span class="advantage__title">Бодрость</span>
             <p class="advantage__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
           </li>
 
-          <li class="advantage__item advantage__item--icon-leaf">
+          <li class="advantage__item advantage__item-icon-leaf">
             <span class="advantage__title">Экологичность</span>
             <p class="advantage__description">Вся упаковка сделана из перерабатываемых материалов</p>
           </li>
@@ -493,7 +493,7 @@
 
               <source media="(min-width: 1024px)" srcset="img/desktop-map.jpg 1x, img/desktop-map.@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-map.jpg 1x, img/tablet-map@2x.jpg 2x">
-              <img src="img/mobile-map.jpg" srcset="img/mobile-map@2x.jpg 2x" width="320" height="450" alt="Местонахождение: Санкт-Петербург, набережная реки Карповки, дом 5.">
+              <img src="img/mobile-map.jpg" srcset="img/mobile-map@2x.jpg 2x" width="100%" height="450" alt="Местонахождение: Санкт-Петербург, набережная реки Карповки, дом 5.">
             </picture>
           </div>
         </div>
@@ -602,7 +602,10 @@
 
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.js" type="text/javascript"></script>
   <script src="./js/script.js" type="module"></script>
+
 </body>
 
 </html>

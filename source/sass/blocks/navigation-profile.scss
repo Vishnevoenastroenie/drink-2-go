@@ -1,3 +1,5 @@
+@import "../global/variables.scss";
+
 .navigation__profile-list {
   display: flex;
 }
@@ -5,9 +7,10 @@
 .navigation__profile-link {
   display: inline-flex;
   padding: 22px;
-  color: variables.$base-black;
-  @include mixins.font-medium;
-  @include mixins.font-subtitle;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -22,13 +25,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .navigation__profile-link  {
+  .navigation__profile-link {
     padding: 32px 22px;
   }
 }
 
-@media (min-width: $desktop-min-widt) {
-  .navigation__profile-list  {
+@media (min-width: $desktop-min-width) {
+  .navigation__profile-list {
     gap: 20px;
   }
 
