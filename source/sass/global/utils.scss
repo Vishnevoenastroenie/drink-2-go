@@ -29,3 +29,23 @@
 
   cursor: pointer;
 }
+
+.visible-desktop {
+  display: none;
+}
+
+.visible-tablet {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .visible-tablet {
+    display: initial;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .visible-desktop {
+    display: initial;
+  }
+}

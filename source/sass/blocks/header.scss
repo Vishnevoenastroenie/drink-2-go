@@ -2,13 +2,32 @@
 
 .header {
   position: relative;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
 }
 
 .header__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin: 0 -20px;
+  display: grid;
+  align-items: center;
+  padding: 0 0 -1px  19px;
+
+  grid-template-columns: min-content 1fr min-content;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 20px;
+
+    grid-template-columns: min-content 1fr;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 1440px;
+    padding: 0 40px;
+  }
 }
 
 .header__logo-container {
@@ -16,106 +35,56 @@
 }
 
 .header__logo {
-  display: flex;
   padding: 12px 20px;
 }
 
 .header__logo-image {
-  display: block;
+  width: 32px;
+  height: 36px;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .header__logo-description {
   display: none;
-}
 
-.header__navigation {
-  position: absolute;
-  top: 100%;
-  z-index: 2;
+  @media (min-width: $desktop-min-width) {
+    display: block;
+    min-width: 135px;
+    margin: 0;
 
-  display: none;
-
-  &--no-js {
-    position: static;
-
-    display: initial;
-    order: 1;
-  }
-}
-
-.header__menu-btn {
-  &--no-js {
-    display: none;
+    text-transform: none;
+    letter-spacing: normal;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .header__container {
-    margin: 0;
+  .header__logo {
+    display: none;
   }
 
-  .header__logo-container {
+  .nav {
     display: flex;
-    flex-shrink: 0;
+    justify-content: end;
     align-items: center;
   }
 
-  .header__logo {
-    padding: 12px 0;
-  }
-
-  .header__logo-image {
-    width: 82px;
-    height: 36px;
-  }
-
-  .header__logo-description {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
-  .header__navigation {
-    position: static;
-
-    display: block;
-
-    &--no-js {
-      order: 0;
-    }
-  }
-
-  .header-profile-list {
-    margin-left: 60px;
-  }
-
-  .header__menu-btn {
-    display: none;
+  .nav__list {
+    justify-content: flex-start;
   }
 }
 
 @media (min-width: $desktop-min-width) {
-  .header__container {
+  .header__logo-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
     justify-content: space-between;
-  }
-
-  .header__logo-container {
-    margin-right: 0;
-  }
-
-  .header__logo {
-    padding-right: 20px;
-  }
-
-  .header__logo-image {
-    width: 170px;
-    height: 36px;
-  }
-
-  .header__logo-description {
-    display: block;
-  }
-
-  .header-profile-list {
-    margin-left: 0;
   }
 }

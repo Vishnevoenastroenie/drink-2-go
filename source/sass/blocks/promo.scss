@@ -7,9 +7,88 @@
 }
 
 .promo__slider-item {
+  position: relative;
+
+  min-width: 280px;
   height: auto;
+  padding-top: 24px;
+  padding-bottom: 60px;
 
   text-align: center;
+}
+
+.promo__subtitle{
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #7859cf;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+}
+
+.promo__title {
+  margin: 0 0 10px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.24px;;
+}
+
+.promo__description {
+  margin: 0 0 20px;
+
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.product__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__button {
+  margin-left: 20px;
+}
+
+.promo__price-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.promo__price-old {
+  margin-right: 2px;
+  margin-left: 2px;
+
+  font-size: 16px;
+  line-height: 32px;
+  color: $color_base-primary;
+  text-decoration: line-through;
+}
+
+.promo__price-new {
+  margin-top: 10px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.promo__button {
+  margin-left: 20px;
 }
 
 .promo__pagination-button {

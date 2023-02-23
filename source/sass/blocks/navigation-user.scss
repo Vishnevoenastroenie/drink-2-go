@@ -1,0 +1,64 @@
+@import "../global/variables.scss";
+
+.user-navigation__link {
+  display: block;
+  height: 60px;
+  padding: 22px;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+    padding: 32px 22px;
+
+    font-size: 0;
+    line-height: 0;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    display: flex;
+    padding: 30px 20px;
+  }
+}
+
+.user-navigation__text {
+  display: none;
+
+  @media (min-width: $desktop-min-width) {
+    display: block;
+
+    font-size: 12px;
+    line-height: 16px;
+    color: $color_base-black;
+  }
+}
+
+.user-navigation__link:active {
+  background-color: $color_base-secondary;
+}
+
+.user-navigation__icon {
+  fill: $color_base-black;
+
+  @media (min-width: $desktop-min-width) {
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .user-navigation__item {
+    margin-right: 20px;
+  }
+
+  .user-navigation__item:last-child {
+    margin-right: 0;
+  }
+
+  .user-navigation__link:hover .user-navigation__text,
+  .user-navigation__link:focus .user-navigation__text {
+    color: $color_base-primary;
+  }
+
+  .user-navigation__link:hover .user-navigation__icon,
+  .user-navigation__link:focus .user-navigation__icon {
+    fill: $color_base-primary;
+  }
+}

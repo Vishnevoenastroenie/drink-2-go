@@ -1,23 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('.header')
-  const burgerMenuBtn = document.querySelector('.burger-menu')
+// Кнопка Открыть/ Закрыть
+const burger = document.querySelector('.burger');
+// Меню/Крестик
+const burgerMenu = burger.querySelector('.burger__menu');
+// Навигация
+const siteNavigation = document.querySelector('.site-navigation');
 
-  function toggleMenuState() {
-    header.classList.toggle('header--menu-opened')
-    burgerButton.classList.toggle('burger-menu--opened')
-  }
-
-  burgerMenuBtn.addEventListener('click', toggleMenuState)
-})
-/*
-// Скрипт для меню
-const menuBtn = document.querySelector('.navigation__btn');
-const menuNav = document.querySelector('.navigation');
-
-
-if (menuBtn) {
-  menuBtn.addEventListener('click', function (evt) {
-    evt.preventDefault;
-    menuNav.classList.toggle('navigation--opened');
-  });
-} */
+if (window.matchMedia('(max-width: 767px)').matches) {
+  burger.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    siteNavigation.classList.toggle('open');
+    burgerMenu.classList.toggle('open');
+  })
+};

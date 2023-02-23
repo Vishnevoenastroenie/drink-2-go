@@ -3,14 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   nojsElements.forEach((element) => {
     element.classList.forEach((className) => {
-      if (className.includes('nojs')) {
+      if (className.includes('no-js')) {
         element.classList.remove(className)
       }
     })
   })
 })
-
-/* if (document.querySelector('.no-js')) {
-  document.querySelector('.no-js').classList.remove('no-js');
-}
- */

@@ -1,71 +1,71 @@
 @import "../global/variables.scss";
 
-.burger-menu {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 22px;
+.burger {
+  width: 60px;
+  height: 60px;
+  padding: 0;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
 
-  &:active {
-    background-color: $color_base-secondary;
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
-.burger-menu--opened {
-  .burger-menu__line {
-    background-color: transparent;
-
-    &::before {
-      top: 50%;
-
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      top: 50%;
-
-      transform: rotate(-45deg);
-    }
-  }
+.burger:active {
+  background-color: $color_base-secondary;
 }
 
-.burger-menu__line {
+.burger__menu {
   position: relative;
 
+  display: block;
   width: 16px;
-  height: 2px;
+  height: 1.5px;
+  margin: 0 auto;
 
   background-color: $color_base-black;
-  transform-origin: left center;
 
-  transition: 0.2s all;
+  transition: height 0.2s ease;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
+.burger__menu::after,
+.burger__menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
 
-    width: 16px;
-    height: 2px;
+  width: 16px;
+  height: 1.5px;
 
-    background-color: $color_base-black;
-    transform-origin: center;
+  background-color: $color_base-black;
+  border: none;
 
-    transition: 0.2s all;
-  }
+  transition: top 0.3s ease, transform 0.3s ease;
+}
 
-  &::before {
-    top: -5px;
-  }
+.burger__menu::after {
+  top: 5px;
+}
 
-  &::after {
-    top: 5px;
-  }
+.burger__menu::before {
+  top: -5px;
+}
+
+.burger__menu.open {
+  height: 0;
+}
+
+.burger__menu.open.burger__menu::after {
+  top: 1px;
+
+  transform: rotate(45deg);
+}
+
+.burger__menu.open.burger__menu::before {
+  top: 1px;
+
+  transform: rotate(-45deg);
 }

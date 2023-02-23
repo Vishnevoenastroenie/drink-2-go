@@ -1,0 +1,40 @@
+@import "../global/variables.scss";
+
+@media (max-width: $mobile-max-width) {
+  .header.header--nojs .header__wrapper {
+    position: relative;
+
+    display: block;
+    padding: 0;
+  }
+
+  .header.header--nojs .header__logo-block {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+  }
+
+  .header.header--nojs .header__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header.header--nojs .site-navigation {
+    position: static;
+    z-index: 0;
+
+    display: block;
+
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header.header--nojs .user-navigation {
+    order: -1;
+    margin-left: 75px;
+  }
+
+  .header.header--nojs .header__burger {
+    display: none;
+  }
+}

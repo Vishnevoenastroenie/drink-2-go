@@ -7,9 +7,10 @@
 /* BLOCKS */
 @import "blocks/header";
 @import "blocks/container";
-@import "blocks/navigation";
-@import "blocks/navigation-profile";
+@import "blocks/site-navigation";
+@import "blocks/navigation-user";
 @import "blocks/burger-menu";
+@import "blocks/menu-mobile--no-js";
 @import "blocks/main";
 @import "blocks/button";
 @import "blocks/swiper";

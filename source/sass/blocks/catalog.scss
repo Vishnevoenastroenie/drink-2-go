@@ -1,5 +1,9 @@
 @import "../global/variables.scss";
 
+.catalog {
+  background-color: $color_lightest-grey;
+}
+
 .catalog__container {
   margin-bottom: 44px;
   padding-top: 49px;
