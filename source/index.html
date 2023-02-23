@@ -8,10 +8,10 @@
   <meta name="keywords" content="Свежесвареный кофе, кофейный напиток, доставка кофе, кофе без кофеина, кофе на растительном молоке">
   <meta name="description" content="Широкий выбор полезных кофейных напитков">
 
-  <!--<link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="">-->
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="">
 
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon/favicon.png">
@@ -72,7 +72,7 @@
 
           <li class="user-navigation__item">
             <a class="user-navigation__link oll-links" href="#">
-              <svg class="navigation__profile-icon" aria-hidden="true" focusable="false" width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <svg class="user-navigation__icon user-icon" aria-hidden="true" focusable="false" width="16" height="16" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66091 3.87546L5.89351 6.66667H10.1065L10.3391 3.87546C10.4531 2.50699 9.37321 1.33333 8 1.33333C6.62679 1.33333 5.54687 2.50699 5.66091 3.87546ZM11.4444 6.66667L11.6678 3.98618C11.8466 1.84036 10.1533 0 8 0C5.84674 0 4.15336 1.84036 4.33218 3.98618L4.55556 6.66667H1.34687H0L0.190476 8L1.00626 13.7105C1.19393 15.0242 2.31905 16 3.64612 16H12.3539C13.6809 16 14.8061 15.0242 14.9937 13.7105L15.8095 8L16 6.66667H14.6531H11.4444ZM11.3333 8H11.2801L11.0579 10.6667H14.0817L14.4627 8H11.3333ZM9.94213 8H6.05787L6.28009 10.6667H9.71991L9.94213 8ZM4.71991 8H4.66667H1.53735L1.9183 10.6667H4.94213L4.71991 8ZM6.61342 14.6667L6.3912 12H9.6088L9.38658 14.6667H6.61342ZM10.9468 12L10.7245 14.6667H12.3539C13.0174 14.6667 13.58 14.1788 13.6738 13.5219L13.8912 12H10.9468ZM5.05324 12L5.27547 14.6667H3.64612C2.98259 14.6667 2.42003 14.1788 2.32619 13.5219L2.10877 12H5.05324Z" fill="currentColor" />
               </svg>
               <span class="visually-hidden">Корзина.</span>
@@ -228,92 +228,83 @@
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
 
         <form class="catalog__form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="catalog__fieldset-blocks">
+            <fieldset class="catalog__filter-group catalog__filter-price">
+              <legend class="catalog__filter-title catalog__filter-title--price">Цена</legend>
 
-          <fieldset class="catalog__filter-price">
-            <legend class="catalog__filter-title catalog__filter-title--price">Цена</legend>
+              <div class="catalog__slider">
+                <span class="catalog__slider-toggle catalog__slider-toggle--min">
+                  <span class="visually-hidden">Снизить цену.</span>
+                </span>
+                <span class="catalog__slider-range"></span>
+                <span class="catalog__slider-line"></span>
+                <span class="catalog__slider-toggle catalog__slider-toggle--max">
+                  <span class="visually-hidden">Повысить цену.</span>
+                </span>
+              </div>
 
-            <div class="catalog__slider">
-              <span class="catalog__slider-toggle catalog__slider-toggle--min">
-                <span class="visually-hidden">Снизить цену.</span>
-              </span>
-              <span class="catalog__slider-range"></span>
-              <span class="catalog__slider-line"></span>
-              <span class="catalog__slider-toggle catalog__slider-toggle--max">
-                <span class="visually-hidden">Повысить цену.</span>
-              </span>
-            </div>
+              <div class="catalog__input-container">
+                <label class="catalog__label-price">
+                  <input class="catalog__input-price" type="number" name="min-price" min="0" max="999" placeholder="0">
+                </label>
 
-            <div class="catalog__input-container">
-              <label class="label">
-                <input class="input input--price" type="number" name="min-price" min="0" max="999" placeholder="0">
-              </label>
+                <span class="catalog__divider"></span>
 
-              <span class="catalog__divider"></span>
+                <label class="label  label--before">
+                  <input class="catalog__input-price" type="number" name="max-price" min="0" max="999" value="900">
+                </label>
+              </div>
+            </fieldset>
 
-              <label class="label">
-                <input class="input input--price" type="number" name="max-price" min="0" max="999" value="900">
-              </label>
-            </div>
-          </fieldset>
+            <fieldset class="catalog__filter-block catalog__filter-group">
+              <legend class="catalog__filter-title">Наличие молока</legend>
+              <ul class="catalog__filter-list list-reset">
+                <li class="catalog__filter-item catalog__filter-item--milk">
+                  <input class="catalog__filter-radio visually-hidden" type="radio" id="no-matter" name="availability-of-milk" checked>
+                  <label for="no-matter" class="catalog__filter-label catalog__filter-label--milk">Неважно</label>
+                </li>
+                <li class="catalog__filter-item catalog__filter-item--milk">
+                  <input class="catalog__filter-radio visually-hidden" type="radio" id="only-animal" name="availability-of-milk">
+                  <label for="only-animal" class="catalog__filter-label catalog__filter-label--milk">Только животное</label>
+                </li>
+                <li class="catalog__filter-item catalog__filter-item--milk">
+                  <input class="catalog__filter-radio visually-hidden" type="radio" id="only-vegetable" name="availability-of-milk">
+                  <label for="only-vegetable" class="catalog__filter-label catalog__filter-label--milk">Только растительное</label>
+                </li>
+                <li class="catalog__filter-item catalog__filter-item--milk">
+                  <input class="catalog__filter-radio visually-hidden" type="radio" id="without-milk" name="availability-of-milk" disabled>
+                  <label for="without-milk" class="catalog__filter-label catalog__filter-label--milk">Без молока</label>
+                </li>
+              </ul>
+            </fieldset>
 
-          <fieldset class="catalog__filter-group catalog__filter-milk">
-            <legend class="catalog__filter-title">Наличие молока</legend>
-
-            <label class="label label--milk">
-              <input class="label__input-radio" name="milk" type="radio" value="any" checked>
-              <span class="label__text">Неважно</span>
-            </label>
-
-            <label class="label label--milk">
-              <input class="label__input-radio" name="milk" type="radio" value="animal">
-              <span class="label__text">Только животное</span>
-            </label>
-
-            <label class="label label--milk">
-              <input class="label__input-radio" name="milk" type="radio" value="vegetable">
-              <span class="label__text">Только растительное</span>
-            </label>
-
-            <label class="label label--milk">
-              <input class="label__input-radio" name="milk" type="radio" value="none" disabled>
-              <span class="label__text">Без молока</span>
-            </label>
-          </fieldset>
-
-          <fieldset class="catalog__filter-group catalog__filter-country">
-            <legend class="catalog__filter-title">Страна произрастания</legend>
-            <label class="label label--checkbox">
-              <input class="input input--checkbox" name="country" type="checkbox" value="Brazil" checked>
-              <span class="label__text">Бразилия</span>
-            </label>
-
-            <label class="label label--checkbox">
-              <input class="input input--checkbox" name="country" type="checkbox" value="Ethiopia">
-              <span class="label__text">Эфиопия</span>
-            </label>
-
-            <label class="label label--checkbox">
-              <input class="input input--checkbox" name="country" type="checkbox" value="Columbia">
-              <span class="label__text">Колумбия</span>
-            </label>
-
-            <label class="label label--checkbox">
-              <input class="input input--checkbox" name="country" type="checkbox" value="Costa-Rica">
-              <span class="label__text">Коста-Рика</span>
-            </label>
-
-            <label class="label label--checkbox">
-              <input class="input input--checkbox" name="country" type="checkbox" value="Peru" disabled>
-              <span class="label__text">Перу</span>
-            </label>
-          </fieldset>
-
-          <div class="catalog__button-container">
-            <button class="catalog__button catalog__button--apply button button--apply" type="submit">Применить фильтр
-            </button>
-            <button class="catalog__button catalog__button--reset button button--reset" type="reset">Сбросить фильтр
-            </button>
+            <fieldset class="catalog__filter-block catalog__filter-group">
+              <legend class="catalog__filter-title">Страна произрастания</legend>
+              <ul class="catalog__filter-list list-reset">
+                <li class="catalog__filter-item">
+                  <input class="catalog__filter-checkbox visually-hidden" type="checkbox" id="country-1" name="Brazil" checked>
+                  <label for="country-1" class="catalog__filter-label catalog__filter-label--country">Бразилия</label>
+                </li>
+                <li class="catalog__filter-item">
+                  <input class="catalog__filter-checkbox visually-hidden" type="checkbox" id="country-2" name="Ethiopia">
+                  <label for="country-2" class="catalog__filter-label catalog__filter-label--country">Эфиопия</label>
+                </li>
+                <li class="catalog__filter-item">
+                  <input class="catalog__filter-checkbox visually-hidden" type="checkbox" id="country-3" name="Colombia">
+                  <label for="country-3" class="catalog__filter-label catalog__filter-label--country">Колумбия</label>
+                </li>
+                <li class="catalog__filter-item">
+                  <input class="catalog__filter-checkbox visually-hidden" type="checkbox" id="country-4" name="Costa-Rica">
+                  <label for="country-4" class="catalog__filter-label catalog__filter-label--country">Коста-Рика</label>
+                </li>
+                <li class="catalog__filter-item">
+                  <input class="catalog__filter-checkbox visually-hidden" type="checkbox" id="country-5" name="Peru" disabled>
+                  <label for="country-5" class="catalog__filter-label catalog__filter-label--country">Перу</label>
+                </li>
+              </ul>
+            </fieldset>
           </div>
+          <button class="catalog__filter-reset" type="reset">Сбросить фильтр</button>
         </form>
 
         <div class="catalog__sorting sorting">

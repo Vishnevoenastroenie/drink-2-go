@@ -1,5 +1,9 @@
 @import "../global/variables.scss";
 
+.catalog__filter-price {
+  border: none;
+}
+
 .catalog__slider {
   position: relative;
 
@@ -85,6 +89,28 @@
   .catalog__slider-range {
     width: 80%;
   }
+}
+
+.catalog__label-price {
+  margin-right: 6px;
+}
+
+.label--before {
+  margin-left: 6px;
+}
+
+.catalog__input-price {
+  width: 125px;
+  padding: 7px 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: $color_base-black;
+
+  background-color: $color_base-white;
+  border: 2px solid $color_primary-lighter;
+  border-radius: 4px;
 }
 
 @media (min-width: $desktop-min-width) {

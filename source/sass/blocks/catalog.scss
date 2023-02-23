@@ -1,11 +1,13 @@
 @import "../global/variables.scss";
 
 .catalog {
+  margin-bottom: 8px;
+
   background-color: $color_lightest-grey;
 }
 
 .catalog__container {
-  margin-bottom: 44px;
+  margin-top: -8px;
   padding-top: 49px;
 
   text-align: center;
@@ -33,11 +35,22 @@
   margin: 0 0 20px;
 
   font-weight: 700;
+  font-size: 24px;
   line-height: 36px;
+  text-align: center;
 }
 
 .catalog__subtitle {
   margin-bottom: 5px;
+  padding-top: 50px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $color_base-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .catalog__button {
