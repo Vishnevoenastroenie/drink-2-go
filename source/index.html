@@ -32,7 +32,7 @@
       <div class="header__logo-container">
         <a class="header__logo oll-links" href="#">
           <picture>
-            <source media="(min-width: 1024px)" srcset="img/desctop-nav-logo.svg">
+            <source media="(min-width: 1440px)" srcset="img/desctop-nav-logo.svg">
             <source media="(min-width: 768px)" srcset="img/tablet-nav-logo.svg">
             <img class="header__logo-image" src="img/mobile-nav-logo.svg" width="32" height="36" alt="Логотип интернет-магазина Drink2Go - фиолетовый овал с белой цифрой два внутри.">
           </picture>
@@ -99,11 +99,11 @@
         <li class="promo__slider-item promo__slider-item--flat-white swiper-slide">
           <div class="promo__container">
             <picture class="promo__image-container">
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop-slider-decaf.webp 1x, img/desktop-slider-decaf@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop-slider-decaf.webp 1x, img/desktop-slider-decaf@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-slider-decaf.webp 1x, img/tablet-slider-decaf@2x.webp 2x">
               <source type="image/webp" srcset="img/mobile-slider-decaf.webp 1x, img/mobile-slider-decaf@2x.webp 2x">
 
-              <source media="(min-width: 1024px)" srcset="img/desktop-slider-decaf.png 1x, img/desktop-slider-decaf@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/desktop-slider-decaf.png 1x, img/desktop-slider-decaf@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-slider-decaf.png 1x, img/tablet-slider-decaf@2x.png 2x">
               <img class="promo__image" src="img/mobile-slider-decaf.png" srcset="img/mobile-slider-decaf@2x.png 2x" width="280" height="280" alt="Алюминиевая банка с кофейным напитком Декаф Флэт Уайт на фоне молочных брызг.">
             </picture>
@@ -124,11 +124,11 @@
         <li class="promo__slider-item promo__slider-item--lavender-latte swiper-slide">
           <div class="promo__container container">
             <picture class="promo__image-container">
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop-slider-lavender.webp 1x, img/desktop-slider-lavender@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop-slider-lavender.webp 1x, img/desktop-slider-lavender@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-slider-lavender.webp 1x, img/tablet-slider-lavender@2x.webp 2x">
               <source type="image/webp" srcset="img/mobile-slider-lavender.webp 1x, img/mobile-slider-lavender@2x.webp 2x">
 
-              <source media="(min-width: 1024px)" srcset="img/desktop-slider-lavender 1x, img/desktop-slider-lavender@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/desktop-slider-lavender 1x, img/desktop-slider-lavender@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-slider-lavender.png 1x, img/tablet-slider-lavender@2x.png 2x">
               <img class="promo__image" src="img/mobile-slider-lavender.png" srcset="img/mobile-slider-lavender@.png 2x" width="280" height="280" alt="Алюминиевая банка с кофейным напитком Лавандовый Латте на фоне веточек лаванды.">
             </picture>
@@ -150,11 +150,11 @@
         <li class="promo__slider-item promo__slider-item--espresso swiper-slide">
           <div class="promo__container container">
             <picture class="promo__image-container">
-              <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop-slider-espresso.webp 1x, img/desktop-slider-espresso@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop-slider-espresso.webp 1x, img/desktop-slider-espresso@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-slider-espresso.webp 1x, img/tablet-slider-espresso@2x.webp 2x">
               <source type="image/webp" srcset="img/mobile-slider-espresso.webp 1x, img/mobile-slider-espresso@2x.webp 2x">
 
-              <source media="(min-width: 1024px)" srcset="img/desktop-slider-espresso.png 1x, img/desktop-slider-espresso@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/desktop-slider-espresso.png 1x, img/desktop-slider-espresso@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/tablet-slider-espresso.png 1x, img/tablet-slider-espresso@2x.png 2x">
               <img class="promo__image" src="img/mobile-slider-espresso.png" srcset="img/mobile-slider-espresso@2x.png 2x" width="280" height="280" alt="Алюминиевая банка с кофейным напитком Тройной Эспрессо на фоне кофейных зёрен.">
             </picture>
@@ -467,7 +467,7 @@
           <a class="pagination__link pagination__link--next oll-links" href="#">
             <span class="pagination__arrow pagination__arrow--right"></span>
             <span class="visually-hidden">Следующая страница.</span>
-            <span>Вперёд</span>
+            <span class="visible-tablet">Вперёд</span>
           </a>
         </div>
       </div>
@@ -477,16 +477,16 @@
       <h2 class="visually-hidden">Местонахождение.</h2>
 
       <div class="map__container map__container--no-js">
-        <div class="map__canvas map__canvas--interactive" id="map"></div>
+        <div class="map__canvas map__canvas--interactive" id="leaflet-map"></div>
         <div class="map__canvas map__canvas--image" id="map-canvas">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/desktop-map.webp 1x, img/desktop-map@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/desktop-map.webp 1x, img/desktop-map@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-map.webp 1x, img/tablet-map@2x.webp 2x">
             <source type="image/webp" srcset="img/mobile-map.webp 1x, img/mobile-map@2x.webp 2x">
 
-            <source media="(min-width: 1024px)" srcset="img/desktop-map.jpg 1x, img/desktop-map.@2x.jpg 2x">
+            <source media="(min-width: 1440px)" srcset="img/desktop-map.jpg 1x, img/desktop-map.@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/tablet-map.jpg 1x, img/tablet-map@2x.jpg 2x">
-            <img src="img/mobile-map.jpg" srcset="img/mobile-map@2x.jpg 2x" width="320" height="450" alt="Местонахождение: Санкт-Петербург, набережная реки Карповки, дом 5.">
+            <img src="img/mobile-map.jpg" srcset="img/mobile-map@2x.jpg 2x" width="320" height="420" alt="Местонахождение: Санкт-Петербург, набережная реки Карповки, дом 5.">
           </picture>
         </div>
       </div>
@@ -589,7 +589,7 @@
       <div class="footer__copyright">
         <p class="footer__copyright-info">Разработано в
           <a class="footer__copyright-link oll-links" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-            <svg aria-hidden="true" focusable="false" width="12" height="16" viewbox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="footer__copyright-icon" aria-hidden="true" focusable="false" width="12" height="16" viewbox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.2151 5.75392L5.97184 2.49957V2.49875L5.97121 2.49916L5.97058 2.49875V2.49957L0.784854 5.75013V1.40658L6.00008 0.830884L11.2151 1.40658V5.75392ZM11.211 6.32987L9.12557 7.62344L5.98451 5.65607L5.97935 6.22863L8.66414 7.9096L8.20107 8.19683L5.98451 6.80853L5.97935 7.3811L7.72892 8.47648L7.31607 8.76717L7.30606 8.77351L5.98451 7.95383L5.97935 8.52631L6.8465 9.06404L5.96315 9.62244L0.796198 6.3886L5.97058 3.1139V3.11448L11.211 6.32987ZM11.2151 11.7713L6 15.0384L0.784854 11.7713V7.02542L5.97763 10.2796L5.98631 10.8693L2.42396 8.63702L2.41871 9.20959L5.99523 11.4728L6.00407 12.0782L2.42873 9.83883L2.42356 10.4113L6 12.6745L9.60624 10.4026V7.95712L11.2151 6.94552V11.7713ZM5.99984 -3.17891e-07L0 0.662267V12.2411L6 16L12 12.2411V0.662267L5.99984 -3.17891e-07Z" fill="currentColor" />
             </svg>
             <span class="visually-hidden">Ссылка на сайт HTML Academy.</span>

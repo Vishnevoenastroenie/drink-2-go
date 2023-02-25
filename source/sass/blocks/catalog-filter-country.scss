@@ -44,12 +44,12 @@
   border: 2px solid $color_primary-lighter;
 }
 
-.filter__checkbox:checked  + .filter__label--country:before {
+.filter__checkbox:checked + .filter__label--country::before {
   background: $color_base-primary;
   border: none;
 }
 
-.filter__checkbox:checked + .filter__label--country:after {
+.filter__checkbox:checked + .filter__label--country::after {
   left: 20px;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .filter__item--country {
-&:last-child {
+  &:last-child {
     margin-bottom: 25px;
   }
 }

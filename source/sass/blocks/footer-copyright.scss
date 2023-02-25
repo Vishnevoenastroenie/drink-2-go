@@ -24,26 +24,22 @@
     vertical-align: top;
     color: $color_base-grey;
   }
+
+  &:hover,
+  &:focus,
+  &:hover svg,
+  &:focus svg {
+    color: $color_base-primary;
+  }
+
+  &:active,
+  &:active svg {
+    color: $color_primary-darker;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .copyright {
     padding-top: 8px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .footer__copyright-link {
-    &:hover,
-    &:focus,
-    &:hover svg,
-    &:focus svg {
-      color: $color_base-primary;
-    }
-
-    &:active,
-    &:active svg {
-      color: $color_primary-darker;
-    }
   }
 }
