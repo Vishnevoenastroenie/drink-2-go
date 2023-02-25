@@ -1,5 +1,7 @@
 @import "../global/variables.scss";
 
+/* Навигационное меню  без использования JS.  Добавить/убрать класс --no-js у тега header */
+
 @media (max-width: $mobile-max-width) {
   .header.header--nojs .header__wrapper {
     position: relative;

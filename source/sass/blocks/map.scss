@@ -39,7 +39,7 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .map__canvas {
     height: 540px;
   }

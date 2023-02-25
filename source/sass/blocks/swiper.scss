@@ -22,7 +22,7 @@
   display: none;
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .swiper-pagination.swiper-pagination-horizontal {
     bottom: 65px;
 

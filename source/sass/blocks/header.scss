@@ -24,7 +24,7 @@
     grid-template-columns: min-content 1fr;
   }
 
-  @media (min-width: $desktop-min-width) {
+  @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 0 40px;
   }
@@ -52,7 +52,7 @@
 .header__logo-description {
   display: none;
 
-  @media (min-width: $desktop-min-width) {
+  @media (min-width: $desktop-width) {
     display: block;
     min-width: 135px;
     margin: 0;
@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .header__logo-block {
     display: flex;
     align-items: center;

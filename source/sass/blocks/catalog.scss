@@ -7,8 +7,8 @@
 }
 
 .catalog__container {
-  margin-top: -8px;
-  padding-top: 49px;
+  margin: 0;
+  padding-top: 42px;
 
   text-align: center;
 }
@@ -27,12 +27,8 @@
   gap: 20px;
 }
 
-.catalog__filter-country {
-  margin-bottom: 35px;
-}
-
 .catalog__title {
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 
   font-weight: 700;
   font-size: 24px;
@@ -65,8 +61,93 @@
 
 .catalog__button-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  gap: 24px;
+}
+
+.catalog__button--submit {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.catalog__button--reset {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.filter__block {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter__title {
+    margin: 0 0 23px;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 19px;
+  }
+}
+
+.filter__list {
+  display: grid;
+
+  text-align: left;
+
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: $tablet-width) {
+
+  .filter__title--price {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
+  .filter__title--price {
+    margin-bottom: 30px;
+  }
+}
+
+.filter__item {
+  margin-bottom: 20px;
+}
+
+.filter__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+
+  .filter__fieldset-blocks {
+    display: grid;
+
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -87,19 +168,6 @@
 
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 42px;
-  }
-
-  .catalog__filter-price {
-    padding-right: 14px;
-  }
-
-  .catalog__filter-milk {
-    padding-left: 6px;
-  }
-
-  .catalog__filter-country {
-    margin-bottom: 0;
-    padding-left: 12px;
   }
 
   .catalog__button {
@@ -127,19 +195,19 @@
     grid-gap: 30px;
   }
 
-  .catalog__list {
-    display: grid;
-    align-items: center;
-    margin-bottom: 70px;
+.catalog__list {
+  display: grid;
+  align-items: center;
+  margin-bottom: 70px;
 
-    text-align: left;
+  text-align: left;
 
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .catalog__container {
     display: grid;
     margin-bottom: 118px;
@@ -171,23 +239,14 @@
     grid-row: 3 / 6;
     row-gap: 0;
   }
+}
 
-  .catalog__filter-price {
-    margin-bottom: 28px;
-    padding-right: 0;
-  }
+.filter__label {
+    position: relative;
 
-  .catalog__filter-milk {
-    margin-bottom: 7px;
-    padding-left: 0;
-  }
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 
-  .catalog__filter-country {
-    margin-bottom: 40px;
-    padding-left: 0;
-  }
-
-  .catalog__button-container {
-    padding-right: 0;
-  }
+    cursor: pointer;
 }

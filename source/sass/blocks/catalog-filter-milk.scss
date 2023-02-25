@@ -1,0 +1,96 @@
+@import "../global/variables.scss";
+
+.filter__title-milk {
+  margin-bottom: 17px;
+}
+
+.filter__label {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  cursor: pointer;
+}
+
+.filter__label--milk {
+  padding: 2px 0 2px 34px;
+}
+
+.filter__label--milk::after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $color_base-primary;
+  border-radius: 50%;
+}
+
+.filter__label--milk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  border: 2px solid $color_base-grey;
+  border-radius: 50%;
+}
+
+.filter__label--milk:hover.filter__label--milk::before,
+.filter__label--milk:focus.filter__label--milk::before {
+  border: 2px solid $color_base-primary;
+}
+
+.filter__label--milk:hover.filter__label--milk::after,
+.filter__label--milk:focus.filter__label--milk::after {
+  content: "";
+
+  background-color: $color_primary-opacity;
+}
+
+.filter__radio:checked + .filter__label--milk::after {
+  content: "";
+
+  background-color: $color_base-primary;
+}
+
+.filter__radio:checked + .filter__label--milk::before {
+  border: 2px solid $color_base-primary;
+}
+
+.filter__radio:disabled + .filter__label--milk::before {
+  border: 2px solid $color_light-grey;
+}
+
+.filter__radio:disabled + .filter__label--milk::after {
+  background-color: transparent;
+}
+
+.filter__radio:disabled + .filter__label--milk {
+  color: $color_base-grey;
+
+  cursor: auto;
+}
+
+.filter__radio:checked:disabled + .filter__label--milk::after {
+  content: "";
+
+  background-color: $color_light-grey;
+}
+
+.filter__radio:checked:disabled + .filter__label--milk::before {
+  border: 2px solid $color_light-grey;
+}
+
+.filter__item--milk {
+&:last-child {
+    margin-bottom: 20px;
+  }
+}

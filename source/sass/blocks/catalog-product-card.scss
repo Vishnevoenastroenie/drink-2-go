@@ -69,7 +69,7 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .catalog__product-card {
     &:hover,
     &:focus {
