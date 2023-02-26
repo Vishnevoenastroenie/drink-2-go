@@ -32,15 +32,43 @@
 
 .header__logo-container {
   margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    min-width: 129px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
 }
 
 .header__logo {
   padding: 12px 20px;
+
+@media (min-width: $tablet-width) {
+  padding: 12px 0;
+  }
+
+@media (min-width: $desktop-width) {
+  padding-right: 20px;
+  }
 }
 
 .header__logo-image {
   width: 32px;
   height: 36px;
+
+@media (min-width: $tablet-width) {
+  width: 82px;
+  height: 36px;
+  }
+
+@media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
 }
 
 .nav__list {
@@ -63,10 +91,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .header__logo {
-    display: none;
-  }
-
   .nav {
     display: flex;
     justify-content: end;

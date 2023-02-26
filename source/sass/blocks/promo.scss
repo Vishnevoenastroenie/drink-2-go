@@ -4,6 +4,13 @@
   position: relative;
 
   background-color: #f3ebe1;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 200px;
+    overflow: hidden;
+
+    background: linear-gradient(180deg,#f3ebe1 0,#f3ebe1 45%,#ffffff 45%);
+  }
 }
 
 .promo__slider-item {
@@ -15,6 +22,27 @@
   padding-bottom: 60px;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-width: 728px;
+    padding: 60px 35px 300px;
+  }
+}
+
+.promo__image-container {
+  @media (min-width: $tablet-width) {
+    min-width: 476px;
+    min-height: 476px;
+  }
+
+  img {
+    position: absolute;
+    top: 350px;
+    left: 146px;
+
+    min-width: 476px;
+    min-height: 476px;
+  }
 }
 
 .promo__subtitle {
@@ -25,7 +53,7 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  color: #7859cf;
+  color: $color_base-primary;
   text-transform: uppercase;
   letter-spacing: 0.48px;
 }
@@ -38,6 +66,13 @@
   line-height: 48px;
   text-align: center;
   letter-spacing: 0.24px;
+
+@media (min-width: $tablet-width) {
+  margin-bottom: 16px;
+
+  font-size: 57px;
+  line-height: 80px;;
+  }
 }
 
 .promo__description {
@@ -46,6 +81,14 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+@media (min-width: $tablet-width) {
+  min-width: 608px;
+  min-height: 640px;
+
+  font-size: 20px;
+  line-height: 32px;
+  }
 }
 
 .product__actions {
@@ -127,10 +170,36 @@
 
     &--prev {
       left: 0;
+
+    &:hover,
+      &:focus {
+        background: linear-gradient(to right, $color_base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: $color_base-grey;
+      }
     }
 
     &--next {
       right: 0;
+
+    &:hover,
+      &:focus {
+        background: linear-gradient(to left, $color_base-white, rgba(255, 255, 255, 0));
+      }
+
+      &:active {
+        background: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
+      }
+
+      &:disabled {
+        color: $color_base-grey;
+      }
     }
   }
 }

@@ -81,7 +81,7 @@
 
 @media (min-width: $tablet-width) {
   .filter__price-input-container {
-    padding-left: 10px;
+    padding-left: 6px;
   }
 
   .filter__price-divider {
@@ -100,6 +100,10 @@
 
   .filter__price-slider-range {
     width: 80%;
+  }
+
+  .input--price {
+    width: 96px;
   }
 }
 

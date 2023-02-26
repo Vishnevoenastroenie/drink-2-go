@@ -93,7 +93,7 @@
 
 @media (min-width: $tablet-width) {
   .advantage {
-    padding-bottom: 99px;
+    padding-bottom: 82px;
   }
 
   .advantage__container {
@@ -106,7 +106,7 @@
 
     text-align: left;
 
-    grid-gap: 50px 10px;
+    grid-gap: 56px 14px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -115,10 +115,11 @@
   }
 
   .advantage__big-subtitle {
-    margin-bottom: 60px;
+    margin-bottom: 66px;
 
-    font-size: 18px;
-    line-height: 32px;
+    font-style: 700;
+    font-size: 42px;
+    line-height: 64px;
   }
 
   .advantage__item {
