@@ -2,6 +2,10 @@
 
 .filter__title-country {
   margin-bottom: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 1px;
+  }
 }
 
 .filter__label--country {

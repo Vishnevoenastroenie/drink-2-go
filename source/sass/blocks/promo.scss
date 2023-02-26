@@ -9,7 +9,7 @@
     padding-bottom: 200px;
     overflow: hidden;
 
-    background: linear-gradient(180deg,#f3ebe1 0,#f3ebe1 45%,#ffffff 45%);
+    background: linear-gradient(180deg, #f3ebe1 0, #f3ebe1 45%, #ffffff 45%);
   }
 }
 
@@ -26,6 +26,13 @@
   @media (min-width: $tablet-width) {
     min-width: 728px;
     padding: 60px 35px 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1360px;
+    padding: 180px 60px 140px 696px;
+
+    text-align: left;
   }
 }
 
@@ -56,6 +63,10 @@
   color: $color_base-primary;
   text-transform: uppercase;
   letter-spacing: 0.48px;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .promo__title {
@@ -67,11 +78,15 @@
   text-align: center;
   letter-spacing: 0.24px;
 
-@media (min-width: $tablet-width) {
-  margin-bottom: 16px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
 
-  font-size: 57px;
-  line-height: 80px;;
+    font-size: 57px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
@@ -82,12 +97,16 @@
   line-height: 20px;
   text-align: center;
 
-@media (min-width: $tablet-width) {
-  min-width: 608px;
-  min-height: 640px;
+  @media (min-width: $tablet-width) {
+    min-width: 608px;
+    min-height: 640px;
 
-  font-size: 20px;
-  line-height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
@@ -110,6 +129,10 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .promo__price-old {
@@ -171,7 +194,7 @@
     &--prev {
       left: 0;
 
-    &:hover,
+      &:hover,
       &:focus {
         background: linear-gradient(to right, $color_base-white, rgba(255, 255, 255, 0));
       }
@@ -188,7 +211,7 @@
     &--next {
       right: 0;
 
-    &:hover,
+      &:hover,
       &:focus {
         background: linear-gradient(to left, $color_base-white, rgba(255, 255, 255, 0));
       }

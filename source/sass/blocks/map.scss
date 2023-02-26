@@ -3,6 +3,11 @@
 .map__container {
   min-height: 420px;
 
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+    max-height: 540px;
+  }
+
   &--no-js .map__canvas--image {
     display: block;
   }

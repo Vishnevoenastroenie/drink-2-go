@@ -89,7 +89,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 
@@ -126,7 +126,7 @@
 
 @media (min-width: $desktop-width) {
   .filter__title--price {
-    margin-bottom: 30px;
+    margin-bottom: 2px;
   }
 }
 
@@ -210,14 +210,14 @@
 @media (min-width: $desktop-width) {
   .catalog__container {
     display: grid;
-    margin-bottom: 118px;
-    padding-top: 100px;
+    margin-bottom: 76px;
+    padding-top: 53px;
 
     grid-template-columns: 318px 1fr;
   }
 
   .catalog__catalog__title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .catalog__title,
@@ -235,9 +235,14 @@
   .catalog__form {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
 
     grid-row: 3 / 6;
     row-gap: 0;
+  }
+
+  .catalog__button-container {
+    padding-right: 0;
   }
 }
 
@@ -257,5 +262,10 @@
 
     gap: 21px;
     grid-template-columns: 227px 230px 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-top: 1px;
   }
 }

@@ -2,6 +2,10 @@
 
 .filter__title-milk {
   margin-bottom: 17px;
+
+  @media (min-width: $desktop-width) {
+    margin: 1px;
+  }
 }
 
 .filter__label {
